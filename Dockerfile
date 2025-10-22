@@ -1,16 +1,7 @@
-# Use small, secure base
-FROM python:3.11-slim
-
+FROM python:3.9-slim
 WORKDIR /app
-
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
-COPY app.py .
-
-# Use non-root user (security practice)
-RUN addgroup --system appgroup && adduser --system --ingroup appgroup appuser
-USER appuser
-
+RUN pip install -r requirements.txt
+COPY . .
 EXPOSE 8080
-CMD ["gunicorn", "--bind", "0.0.0.0:8080", "app:app", "--workers", "2", "--threads", "4"]
+CMD ["python", "app.py"]
