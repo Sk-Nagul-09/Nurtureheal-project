@@ -47,13 +47,20 @@ Build and run locally:
 ```bash
 docker build -t drviki-app .
 docker run -p 8080:8080 drviki-app
+
+---------------------
+
 Access the app at:
 http://localhost:8080
+
+------------------------
 
 🔐 Security and Cost Optimization
 Security: Docker image scanned with Trivy to detect known vulnerabilities.
 
 Cost Optimization: Implemented measures like stopping idle EC2 instances and using autoscaling for dynamic load management.
+
+-----------------------
 
 📊 Monitoring
 Used AWS CloudWatch to visualize:
@@ -64,6 +71,8 @@ CPU and memory utilization
 
 Application request metrics
 
+----------------------
+
 🖼️ Visual Outputs
 ✅ GitHub Actions pipeline screenshot (build → test → deploy)
 
@@ -72,6 +81,8 @@ Application request metrics
 ✅ AWS CloudWatch metrics view
 
 ✅ Trivy vulnerability scan summary
+
+-------------------------------
 
 📁 Repository Structure
 bash
@@ -84,6 +95,8 @@ Copy code
 │   └── deploy.yml
 └── README.md             # Project documentation
 
+---------------------------------
+
 🧠 Key Learnings
 Automated CI/CD using GitHub Actions.
 
@@ -92,6 +105,8 @@ Containerized apps for consistent deployments using Docker.
 Integrated monitoring and security checks in deployment workflow.
 
 Gained awareness of cloud cost management strategies.
+
+--------------------------------------
 
 👤 Author
 Sk Nagul
